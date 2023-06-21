@@ -1,0 +1,41 @@
+/* * {
+  margin: 0%;
+  border: 0%;
+} */
+body {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+button {
+  color: white;
+  background-color: blueviolet;
+  flex-grow: 1;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 1rem;
+  border-color: rgb(122, 198, 45);
+  gap: 10px;
+  row-gap: 10px;
+  font-size: large;
+  align-content: space-between;
+  margin: 0.2rem;
+}
+/* button:nth-child(21) {
+  flex-basis: 100%;
+} */
+#textarea {
+  width: 20rem;
+  height: 4rem;
+  color: black;
+  font-size: x-large;
+}
+
+#input {
+  border: 1px solid orange;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: row wrap;
+}
