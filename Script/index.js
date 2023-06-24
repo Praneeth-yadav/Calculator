@@ -1,6 +1,13 @@
 let btn = document.querySelectorAll(".num");
 let textarea = "";
 let a;
+document.querySelector("#textarea").addEventListener("keypress", (event) => {
+  textarea = document.querySelector("#textarea").value;
+  if (event.key == "Enter") {
+    console.log("inside enter", textarea);
+    equal();
+  }
+});
 function display(a) {
   textarea = textarea + a;
   console.log(textarea);
