@@ -1,12 +1,28 @@
 let btn = document.querySelectorAll(".num");
-let textarea = "";
+var textarea = "";
 let a;
 document.querySelector("#textarea").addEventListener("keypress", (event) => {
-  textarea = document.querySelector("#textarea").value;
+  console.log("key log= ", event.key);
   if (event.key == "Enter") {
     console.log("inside enter", textarea);
     equal();
+  } else {
+    textarea = textarea + event.key;
   }
+  console.log("final = ", textarea);
+});
+document.querySelector("#textarea").addEventListener("keydown", (event) => {
+  console.log("key log= ", event.key);
+  if (event.key === "Backspace" || event.key === "Delete") {
+    var a = textarea.toString();
+
+    a = a.substring(0, a.length - 1);
+    textarea = a;
+
+    console.log("inside backspace", a);
+    //equal();
+  }
+  console.log("final = ", textarea);
 });
 function display(a) {
   textarea = textarea + a;
